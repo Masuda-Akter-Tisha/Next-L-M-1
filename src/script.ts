@@ -11,4 +11,4 @@ const add = (a : number, b : number) => {
     return a + b;
 }
 
-console.log(add (20, 10));
+console.log(add (90, 20));
