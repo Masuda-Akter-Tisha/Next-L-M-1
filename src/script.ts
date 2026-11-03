@@ -44,3 +44,18 @@ const greetings = (FirstName : string, greetings = 'hello',) => {
 }
 
 greetings ('Tisha');
+
+// rest parameter (...args)
+ 
+const sum = (...numbers : number []) => {
+    return numbers.reduce ((total, sum) => total + sum , 0);
+}
+
+console.log(sum (1, 2, 3, 4, 5));
+
+const logUsersAction = (...args : [name: string, age: number, isActive: boolean]) => {
+    const [name, age] = args;
+    console.log(name + 'is' + age);
+}
+
+logUsersAction ('Tisha', 24, false);
