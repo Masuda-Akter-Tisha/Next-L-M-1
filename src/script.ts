@@ -22,4 +22,25 @@ const arr : string [] = ['Programming', 'hero'];
 const numArr : number [] = [10, 45, 30];
 
 //  tuple an readonly modifier
-const dhakaLat : readonly [number, number] = [ 23.81033, 90.41252];
+const dhakaLatLong : readonly [number, number] = [ 23.81033, 90.41252];
+
+
+// optional, default, rest parameters (...args)
+
+// optional
+const concatName = (firstName : string, lastName ?: string) => {
+    if (!lastName) {
+        return firstName;
+    }
+
+    return firstName + " " + lastName;
+}
+
+console.log(concatName ('Tisha'));
+
+// default
+const greetings = (FirstName : string, greetings = 'hello',) => {
+ console.log(greetings + ", " + FirstName);
+}
+
+greetings ('Tisha');
